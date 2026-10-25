@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vize Studies — напоминания об уроках</title><link rel="icon" href="avatar.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<canvas id="bg"></canvas>
+<header><a class="brand" href="#"><img src="avatar.png" alt=""><b>Vize Studies</b></a><button id="authBtn" class="btn ghost">Войти</button></header>
+<main>
+<section class="hero">
+  <div class="stage"><div id="t1" class="t3d big" data-t="VIZE"></div><div id="t2" class="t3d small" data-t="STUDIES"></div></div>
+  <p class="lead">Бот в Telegram напомнит об уроке, встрече или сделке — вовремя и без лишних приложений.</p>
+  <button id="cta" class="btn">Подключить бота</button>
+</section>
+<section id="app" hidden>
+  <h2>Привет, <span id="uname"></span></h2>
+  <div class="grid">
+    <article class="card"><h3>1. Бот <i id="s1" class="chip">не подключён</i></h3>
+      <p>Создайте бота у <a href="https://t.me/BotFather" target="_blank" rel="noopener">@BotFather</a> командой /newbot и вставьте токен.</p>
+      <input id="token" type="password" placeholder="123456:ABC-DEF..." autocomplete="off"><button id="saveBot" class="btn">Подключить</button></article>
+    <article class="card"><h3>2. Chat ID <i id="s2" class="chip">не выбран</i></h3>
+      <p>Напишите своему боту /start, затем нажмите поиск.</p>
+      <button id="find" class="btn ghost">Найти мой Chat ID</button><div id="chats" class="chats"></div>
+      <input id="chatId" placeholder="или введите Chat ID вручную"><div class="row"><button id="saveChat" class="btn">Сохранить</button><button id="test" class="btn ghost">Тест</button></div></article>
+    <article class="card wide"><h3>3. Напоминания</h3>
+      <form id="rf" class="rform"><input id="rt" placeholder="Например: Английский с Анной" required maxlength="120">
+        <select id="rtype"><option value="lesson">📚 Урок</option><option value="meeting">🤝 Встреча</option><option value="deal">💼 Сделка</option><option value="other">⏰ Другое</option></select>
+        <input id="rtime" type="datetime-local" required>
+        <select id="rbefore"><option value="0">В момент начала</option><option value="5">За 5 минут</option><option value="15" selected>За 15 минут</option><option value="30">За 30 минут</option><option value="60">За 1 час</option></select>
+        <button class="btn">Добавить</button></form>
+      <ul id="list" class="list"></ul></article>
+  </div>
+</section></main>
+<dialog id="dlg"><form id="af"><div class="tabs"><button type="button" data-m="register" class="on">Регистрация</button><button type="button" data-m="login">Вход</button></div>
+  <input id="an" placeholder="Имя" maxlength="40"><input id="ae" type="email" placeholder="Email" required autocomplete="email">
+  <input id="ap" type="password" placeholder="Пароль (от 6 символов)" required minlength="6" autocomplete="current-password">
+  <p id="aerr" class="err"></p><button class="btn full" id="asub">Создать аккаунт</button><button type="button" class="x" id="close" aria-label="Закрыть">×</button></form></dialog>
+<div id="toast" role="status"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="app.js"></script></body></html>

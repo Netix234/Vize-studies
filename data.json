@@ -1,0 +1,37 @@
+{
+ "users": [
+  {
+   "id": "19224fe097967715aec15e6a",
+   "name": "Дмитрий Сахаров",
+   "email": "dsaharov688@gmail.com",
+   "salt": "81eb8bdbf5eb431560d16e2b",
+   "pass": "a6dea297f3259f12e1e80d2ffc57b5140b1a38b4c864cc185824dae9dbe5774e",
+   "reminders": [
+    {
+     "id": "9ba8d0ccd7a7b1b6e8280640",
+     "title": "Англ мова",
+     "type": "lesson",
+     "time": "2026-10-25T14:17:00.000Z",
+     "before": 5,
+     "tz": "Europe/Moscow",
+     "sent": true
+    },
+    {
+     "id": "7eeeabd53df2dfbc642983b8",
+     "title": "Англ мова",
+     "type": "lesson",
+     "time": "2026-10-25T14:26:00.000Z",
+     "before": 5,
+     "tz": "Europe/Moscow",
+     "sent": true
+    }
+   ],
+   "token": "8778961647:AAGaGYsiFEbmt29Ocexdw4yfiiBv-VecrCI",
+   "botName": "KizexCRM_bot",
+   "chatId": "7999613061"
+  }
+ ],
+ "sessions": {
+  "8dc08fed80d475ce713d660b": "19224fe097967715aec15e6a"
+ }
+}
